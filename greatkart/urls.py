@@ -27,6 +27,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('store.html', store_views.store, name='store_html'),  # <-- This line is key
     path('store/', include('store.urls')),  # Optional: keep if you're also using /store/
-     path('cart/', include('carts.urls')), 
+    path('cart/', include('carts.urls')), 
+    path('accounts/', include('accounts.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
